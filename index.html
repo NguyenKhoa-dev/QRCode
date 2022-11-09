@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Convert to QR Code</title>
+</head>
+<body>
+    <h1><span>Create</span> And <span>Read</span> QR Code</h1>
+    <div class="wrapper">
+        <div class="row create-container">
+            <h2>Convert to QR Code</h2>
+            <div class="text-field">
+                <input id="input-content" type="text" placeholder="Input your link or text">
+            </div>
+            <div>
+                <button id="btn-convert" class="btn">Create QR Code</button>
+            </div> 
+            <div class="flex-center">
+                <div id="rsl" class="result">
+                    <div class="header">
+                        <h3>Result</h3>
+                    </div>    
+                    <div class="content">
+                        <img id="QR-image" src="" alt="">
+                        <div class="tools">
+                            <button class="btn diff">Copy Image</button>
+                            <button class="btn diff" onclick="clearInput()">Clear</button>
+                        </div>
+                    </div>                           
+                </div>
+            </div>                   
+        </div>
+        <div class="row read-container">
+            
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

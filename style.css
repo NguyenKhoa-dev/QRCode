@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary-color: #5DA7DB;
+    --text-color: #fff;
+    --text-second-color: #5837D0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 900
+}
+
+h1 span {
+    color: var(--text-second-color);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: var(--text-second-color);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.wrapper .row {
+    flex: 1;
+}
+
+.create-container {
+    padding: 10px 20px;
+}
+
+.create-container .text-field {
+    position: relative;
+    padding: 5px 0;
+    border-bottom: solid 1px var(--text-color);
+    margin-bottom: 10px;
+}
+
+.create-container .text-field input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 1.2em;
+    transition: linear 0.2s;
+}
+
+.create-container .text-field::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-second-color);
+    transition: linear 0.2s;
+}
+
+.create-container .text-field input:focus {
+    text-indent: 10px;
+}
+
+.create-container .text-field:has(input:focus):after,
+.create-container .text-field:has(input:not(:placeholder-shown)):after  {
+    width: 100%;
+}
+
+.create-container .text-field input::placeholder {
+    color: #f1f1f1;
+    font-style: italic;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background: var(--text-second-color);
+    padding: 10px;
+    color: var(--text-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: linear 0.2s;
+    font-weight: 400;
+}
+
+.btn.diff {
+    border: 1px solid var(--text-second-color);
+}
+
+.btn:hover {
+    background: var(--text-color);
+    color: var(--text-second-color);
+}
+
+.btn.diff:hover {
+    border: 1px solid var(--text-second-color);
+    background: var(--text-color);
+    color: var(--text-second-color);
+}
+
+.result {
+    display: none;
+    margin-top: 10px;
+    background-color: var(--text-color);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.result.show {
+    display: inline-block;
+}
+
+.result .header {
+    margin-bottom: 10px;
+}
+
+.result .content {
+    display: flex; 
+    gap: 10px;
+}
+
+.result .content .tools {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result .content img {
+    border: 1px dashed var(--text-second-color);
+} 
