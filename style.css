@@ -160,3 +160,16 @@ h3 {
 .result .content img {
     border: 1px dashed var(--text-second-color);
 } 
+
+#pending {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--text-second-color);
+    font-style: italic;
+    font-weight: 600;
+}
+
+#pending.show {
+    display: block;
+}
